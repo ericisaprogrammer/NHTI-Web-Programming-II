@@ -3,7 +3,7 @@
   double temp = 0.0;
 
   if (IsPost) {
-    var operator = Request["operation"];
+    string operator = "test";
     double firstNumber = Convert.ToDouble(Request["first-number"]);
     double secondNumber = Convert.ToDouble(Request["second-number"]);
     if(firstNumber == null || secondNumber == null) {
