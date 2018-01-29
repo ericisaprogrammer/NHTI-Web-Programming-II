@@ -9,27 +9,22 @@
       ans = "Put some numbers in there, you nazi";
     }
     else {
-      double temp = 0.0;
       switch(op) {
         case "add":
-          temp = firstNumber + secondNumber;
-          ans = "" + temp;
+          ans = (firstNumber + secondNumber) + "";
           break;
         case "sub":
-          temp = firstNumber - secondNumber;
-          ans = "" + temp;
+          ans = (firstNumber - secondNumber) + "";
           break;
         case "multiply":
-          temp = firstNumber * secondNumber;
-          ans = "" + temp;
+          ans = (firstNumber * secondNumber) + "";
           break;
         case "divide":
           if(secondNumber == 0) {
             ans = "Bruh, you gon break me no 0 in denom plz";
           }
           else {
-            temp = firstNumber / secondNumber;
-            ans = "" + temp;
+            ans = (firstNumber / secondNumber) + "";
           }
           break;
         default:
