@@ -1,3 +1,39 @@
+@{
+  string ans = "";
+  if(IsPost) {
+    string operation = Request["operator"];
+    double firstNumber = Convert.ToDouble(Request["first-number"]);
+    double secondNumber = Convert.ToDouble(Request["second-number"]);
+    if(firstNumber == null || secondNumber == null) {
+      ans = "Put some fucking numbers in there, you nazi";
+    }
+    else {
+      switch(operation) {
+        case add:
+          ans = firstNumber + secondNumber;
+          break;
+        case sub:
+          ans = firstNumber - secondNumber;
+          break;
+        case multiply:
+          ans = firstNumber * secondNumber;
+          break;
+        case divide:
+          if(secondNumber == 0) {
+            ans = "Bruh, you gon break me no 0 in denom plz";
+          }
+          else {
+            ans = firstNumber / secondNumber;
+          }
+          break;
+        default:
+          ans = "TF how you do this???";
+          break;
+      }
+    }
+  }
+}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,39 +81,3 @@
   </div>
   </body>
 </html>
-
-@{
-  string ans = "";
-  if(IsPost) {
-    string operation = Request["operator"];
-    double firstNumber = Convert.ToDouble(Request["first-number"]);
-    double secondNumber = Convert.ToDouble(Request["second-number"]);
-    if(firstNumber == null || secondNumber == null) {
-      ans = "Put some fucking numbers in there, you nazi";
-    }
-    else {
-      switch(operation) {
-        case add:
-          ans = firstNumber + secondNumber;
-          break;
-        case sub:
-          ans = firstNumber - secondNumber;
-          break;
-        case multiply:
-          ans = firstNumber * secondNumber;
-          break;
-        case divide:
-          if(secondNumber == 0) {
-            ans = "Bruh, you gon break me no 0 in denom plz";
-          }
-          else {
-            ans = firstNumber / secondNumber;
-          }
-          break;
-        default:
-          ans = "TF how you do this???";
-          break;
-      }
-    }
-  }
-}
