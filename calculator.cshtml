@@ -1,42 +1,5 @@
 @{
   string ans = "";
-  if(IsPost) {
-    string operator = Request["operation"];
-    double firstNumber = Convert.ToDouble(Request["first-number"]);
-    double secondNumber = Convert.ToDouble(Request["second-number"]);
-    if(firstNumber == null || secondNumber == null) {
-      ans = "Put some fucking numbers in there, you nazi";
-    }
-    else {
-      double temp = 0;
-      switch(operator) {
-        case "add":
-          temp = firstNumber + secondNumber;
-          ans = "" + temp;
-          break;
-        case "sub":
-          temp = firstNumber - secondNumber;
-          ans = "" + temp;
-          break;
-        case "multiply":
-          temp = firstNumber * secondNumber;
-          ans = "" + temp;
-          break;
-        case "divide":
-          if(secondNumber == 0) {
-            ans = "Bruh, you gon break me no 0 in denom plz";
-          }
-          else {
-            temp = firstNumber / secondNumber;
-            ans = "" + temp;
-          }
-          break;
-        default:
-          ans = "TF how you do this???";
-          break;
-      }
-    }
-  }
 }
 
 <!DOCTYPE html>
@@ -88,3 +51,43 @@
     </form>
   </body>
 </html>
+
+@{
+  if(IsPost) {
+    string operator = Request["operation"];
+    double firstNumber = Convert.ToDouble(Request["first-number"]);
+    double secondNumber = Convert.ToDouble(Request["second-number"]);
+    if(firstNumber == null || secondNumber == null) {
+      ans = "Put some fucking numbers in there, you nazi";
+    }
+    else {
+      double temp = 0;
+      switch(operator) {
+        case "add":
+          temp = firstNumber + secondNumber;
+          ans = "" + temp;
+          break;
+        case "sub":
+          temp = firstNumber - secondNumber;
+          ans = "" + temp;
+          break;
+        case "multiply":
+          temp = firstNumber * secondNumber;
+          ans = "" + temp;
+          break;
+        case "divide":
+          if(secondNumber == 0) {
+            ans = "Bruh, you gon break me no 0 in denom plz";
+          }
+          else {
+            temp = firstNumber / secondNumber;
+            ans = "" + temp;
+          }
+          break;
+        default:
+          ans = "TF how you do this???";
+          break;
+      }
+    }
+  }
+}
