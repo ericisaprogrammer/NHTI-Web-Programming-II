@@ -15,23 +15,23 @@
   <fieldset class='legacy-form-row'>
     <legend>Operation</legend>
     <input id='addition'
-           name='addition'
+           name='operation'
            type='radio'
            value='add'
            checked />
     <label for='addition' class='radio-label'>Addition</label>
     <input id='subtraction'
-           name='subtraction'
+           name='operation'
            type='radio'
            value='sub' />
     <label for='subtraction' class='radio-label'>Subtraction</label>
     <input id='multiplication'
-           name='multiplication'
+           name='operation'
            type='radio'
            value='multiply' />
     <label for='subtraction' class='radio-label'>Multiplication</label>
     <input id='division'
-           name='division'
+           name='operation'
            type='radio'
            value='divide' />
     <label for='subtraction' class='radio-label'>Division</label>
@@ -47,10 +47,35 @@
 </html>
 
 @{
+  string ans = "";
   if(IsPost) {
     string operation = Request["operator"];
     double firstNumber = Convert.ToDouble(Request["first-number"]);
     double secondNumber = Convert.ToDouble(Request["second-number"]);
-    double ans = firstNumber + secondNumber;
+    if(firstNumber == null || secondNumber == null) {
+      ans = "Put some fucking numbers in there, you nazi";
+    }
+    else {
+      switch(operation) {
+        case add:
+          ans = firstNumber + secondNumber;
+          break;
+        case sub:
+          ans = firstNumber - secondNumber;
+          break;
+        case multiply:
+          ans = firstNumber * secondNumber;
+          break;
+        case divide:
+          if(secondNumber == 0)
+            ans = "Bruh, you gon break me no 0 in denom plz";
+          else
+            ans = firstNumber / secondNumber;
+          break;
+        default:
+          ans = "TF how you do this???";
+          break;
+      }
+    }
   }
 }
