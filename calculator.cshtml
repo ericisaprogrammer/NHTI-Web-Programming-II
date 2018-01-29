@@ -1,13 +1,3 @@
-@{
-  double ans = 0;
-  if(IsPost) {
-    string operation = Request["operator"];
-    double firstNumber = Convert.ToDouble(Request["first-number"]);
-    double secondNumber = Convert.ToDouble(Request["second-number"]);
-    ans = firstNumber + secondNumber;
-  }
-}
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -55,3 +45,12 @@
   </div>
   </body>
 </html>
+
+@{
+  if(IsPost) {
+    string operation = Request["operator"];
+    double firstNumber = Convert.ToDouble(Request["first-number"]);
+    double secondNumber = Convert.ToDouble(Request["second-number"]);
+    double ans = firstNumber + secondNumber;
+  }
+}
