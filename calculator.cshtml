@@ -3,8 +3,8 @@
 
   if (IsPost) {
     string op = Request["operation"];
-    double firstNumber = Convert.ToDouble(Request["first-number"]);
-    double secondNumber = Convert.ToDouble(Request["second-number"]);
+    double firstNumber = Convert.ToDouble(Request["first"]);
+    double secondNumber = Convert.ToDouble(Request["second"]);
     if(firstNumber == null || secondNumber == null) {
       ans = "Put some numbers in there, you nazi";
     }
