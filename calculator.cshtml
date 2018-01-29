@@ -1,6 +1,5 @@
 @{
   string ans = "";
-  double temp = 0.0;
 
   if (IsPost) {
     string op = Request["operation"];
@@ -10,6 +9,7 @@
       ans = "Put some numbers in there, you nazi";
     }
     else {
+      double temp = 0.0;
       switch(op) {
         case "add":
           temp = firstNumber + secondNumber;
