@@ -8,22 +8,27 @@
       ans = "Put some fucking numbers in there, you nazi";
     }
     else {
+      double temp = 0;
       switch(operation) {
         case "add":
-          ans = firstNumber + secondNumber;
+          temp = firstNumber + secondNumber + "";
+          ans = "" + temp;
           break;
         case "sub":
-          ans = firstNumber - secondNumber;
+          temp = firstNumber - secondNumber;
+          ans = "" + temp;
           break;
         case "multiply":
-          ans = firstNumber * secondNumber;
+          temp = firstNumber * secondNumber;
+          ans = "" + temp;
           break;
         case "divide":
           if(secondNumber == 0) {
             ans = "Bruh, you gon break me no 0 in denom plz";
           }
           else {
-            ans = firstNumber / secondNumber;
+            temp = firstNumber / secondNumber;
+            ans = "" + temp;
           }
           break;
         default:
