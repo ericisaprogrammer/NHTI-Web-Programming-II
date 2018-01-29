@@ -1,5 +1,5 @@
 @{
-	
+
 
   if(IsPost) {
 
@@ -10,10 +10,22 @@
 <html>
   <head>
     <title>Calculator</title>
-    <meta>A simple form calculator.</meta>
   </head>
 	<body>
-  <label for="first-number">First Number</label>
-  <input id="first-number" name="first type="number"/>
-	</body>
+  <div class="form-row">
+    <label for="first-number">First Number: </label>
+    <input id="first-number" name="first" type="number"/>
+  </div>
+  <div class="form-row">
+    <label for="second-number">Second Number: </label>
+    <input id="second-number" name="second" type="number"/>
+  </div>
+  <div class="form-row">
+    <label for="operator">Operator: </label>
+    <input id="operator" name="operator" placeholder="+, -, *, or //"/>
+  </div>
+  <div class="form-row">
+    <button>Submit</buttonss>
+  </div>
+  </body>
 </html>
