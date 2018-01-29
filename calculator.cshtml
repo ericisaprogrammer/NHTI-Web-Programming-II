@@ -1,7 +1,7 @@
 @{
   string ans = "";
   if(IsPost) {
-    string operation = Request["operator"];
+    string operator = Request["operation"];
     double firstNumber = Convert.ToDouble(Request["first-number"]);
     double secondNumber = Convert.ToDouble(Request["second-number"]);
     if(firstNumber == null || secondNumber == null) {
