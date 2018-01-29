@@ -45,44 +45,46 @@
     <title>Calculator</title>
   </head>
 	<body>
-  <div class="form-row">
-    <label for="first-number">First Number: </label>
-    <input id="first-number" name="first" type="number"/>
-  </div>
-  <div class="form-row">
-    <label for="second-number">Second Number: </label>
-    <input id="second-number" name="second" type="number"/>
-  </div>
-  <fieldset class='legacy-form-row'>
-    <legend>Operation</legend>
-    <input id='addition'
-           name='operation'
-           type='radio'
-           value='add'
-           checked />
-    <label for='addition' class='radio-label'>Addition</label>
-    <input id='subtraction'
-           name='operation'
-           type='radio'
-           value='sub' />
-    <label for='subtraction' class='radio-label'>Subtraction</label>
-    <input id='multiplication'
-           name='operation'
-           type='radio'
-           value='multiply' />
-    <label for='subtraction' class='radio-label'>Multiplication</label>
-    <input id='division'
-           name='operation'
-           type='radio'
-           value='divide' />
-    <label for='subtraction' class='radio-label'>Division</label>
-  </fieldset>
-  <div class="form-row">
-    <label for="answer">Answer: </label>
-    <span id="answer" name="answer">@ans</span>
-  </div>
-  <div class="form-row">
-    <button>Submit</buttons>
-  </div>
+    <form action="" method="post">
+      <div class="form-row">
+        <label for="first-number">First Number: </label>
+        <input id="first-number" name="first" type="number"/>
+      </div>
+      <div class="form-row">
+        <label for="second-number">Second Number: </label>
+        <input id="second-number" name="second" type="number"/>
+      </div>
+      <fieldset class='legacy-form-row'>
+        <legend>Operation</legend>
+        <input id='addition'
+               name='operation'
+               type='radio'
+               value='add'
+               checked />
+        <label for='addition' class='radio-label'>Addition</label>
+        <input id='subtraction'
+               name='operation'
+               type='radio'
+               value='sub' />
+        <label for='subtraction' class='radio-label'>Subtraction</label>
+        <input id='multiplication'
+               name='operation'
+               type='radio'
+               value='multiply' />
+        <label for='subtraction' class='radio-label'>Multiplication</label>
+        <input id='division'
+               name='operation'
+              type='radio'
+              value='divide' />
+        <label for='subtraction' class='radio-label'>Division</label>
+      </fieldset>
+      <div class="form-row">
+        <label for="answer">Answer: </label>
+        <span id="answer" name="answer">@ans</span>
+      </div>
+      <div class="form-row">
+        <button>Submit</buttons>
+      </div>
+    </form>
   </body>
 </html>
