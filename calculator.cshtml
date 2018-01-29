@@ -1,9 +1,10 @@
 @{
+  double ans = 0;
   if(IsPost) {
     string operation = Request["operator"];
     double firstNumber = Convert.ToDouble(Request["first-number"]);
     double secondNumber = Convert.ToDouble(Request["second-number"]);
-    double ans = firstNumber + secondNumber;
+    ans = firstNumber + secondNumber;
   }
 }
 
