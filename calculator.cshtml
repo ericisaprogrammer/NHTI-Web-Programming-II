@@ -67,10 +67,12 @@
           ans = firstNumber * secondNumber;
           break;
         case divide:
-          if(secondNumber == 0)
+          if(secondNumber == 0) {
             ans = "Bruh, you gon break me no 0 in denom plz";
-          else
+          }
+          else {
             ans = firstNumber / secondNumber;
+          }
           break;
         default:
           ans = "TF how you do this???";
