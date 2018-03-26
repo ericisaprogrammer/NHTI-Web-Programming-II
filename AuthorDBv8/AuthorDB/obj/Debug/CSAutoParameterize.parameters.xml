@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BookContext-Web.config Connection String" description="BookContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=ist-240.database.windows.net;                                      Initial Catalog=18S240EO-DB;                                      Persist Security Info=True;                                      User ID=eosgood;                                      Password=P@ssword" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\NHTI\\Desktop\\AuthorDB\\AuthorDB\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookContext']/@connectionString" />
+  </parameter>
+</parameters>
